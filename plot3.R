@@ -24,15 +24,15 @@ plot3 <- function(data_set){
      #Plot time vs. Sub metering
      with(of_interest,{
           plot(date_time,Sub_metering_1,
-               pch=".") #no need to specify color
+               pch="."), #no need to specify color
           
           plot(date_time,of_interest$Sub_metering_2,
                pch=".",
-               col="blue")
+               col="blue"),
           
           plot(date_time,Sub_metering_3,
                pch=".",
-               col="red")
+               col="red"),
           ylab="Energy sub metering"
      })
      
@@ -42,7 +42,7 @@ plot3 <- function(data_set){
      lines(date_time,of_interest$Sub_metering_3,col="red")
      
      #Add the legend
-     legend("topright",lwd=1,col=c("black","red","blue"),
+     legend("topright",lty=c(1,1,1),col=c("black","red","blue"),
             legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
      
      dev.off()
